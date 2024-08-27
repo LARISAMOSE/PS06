@@ -1,13 +1,10 @@
-import requests
-from bs4 import BeautifulSoup
-url = "https://"
-
-response = requests.get(url)
-soup = BeautifulSoup(response.text, "html.parsel")
-rows = soup.find_all("tr")
-data = []
-for row in rows:
-    cols = soup.find_all("td")
-    cleaned_cols = [col.text.strip() for col in cols]
-    data.append(cleaned_cols)
-print(data)
+data = [
+    ["100", "200", "300"],
+    ["400", "500", "600"]
+    ]
+numbers = []
+for row in data:
+    for text in row:
+        number = int(text)
+        numbers.append(number)
+print(numbers)
