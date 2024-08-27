@@ -1,10 +1,11 @@
 data = [
-    ["100", "200", "300"],
-    ["400", "500", "600"]
+    [100, 120, 130],
+    [400, 500, 600],
+    [150, 140, 110]
     ]
-numbers = []
+list =[]
 for row in data:
-    for text in row:
-        number = int(text)
-        numbers.append(number)
-print(numbers)
+    for item in row:
+        if item > 190:
+            list.append(item)
+print(list)
